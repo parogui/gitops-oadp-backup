@@ -1,7 +1,6 @@
 apiVersion: apps.openshift.io/v1
 kind: DeploymentConfig
 metadata:
-  generation: 6
   name: jenkins
   namespace: parodrig-jenkins-oadp
 spec:
