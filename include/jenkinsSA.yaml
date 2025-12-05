@@ -1,6 +1,4 @@
 apiVersion: v1
-imagePullSecrets:
-  - name: jenkins-dockercfg-tt6m9
 kind: ServiceAccount
 metadata:
   labels:
