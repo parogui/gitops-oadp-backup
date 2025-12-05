@@ -64,20 +64,18 @@ spec:
             name: jenkins-trusted-ca-bundle
           - mountPath: /mnt/test
             name: httpd-pvc
-        serviceAccount: jenkins
-        serviceAccountName: jenkins
-        volumes:
-          - name: jenkins-data
-            persistentVolumeClaim:
-              claimName: jenkins
-          - configMap:
-              defaultMode: 420
-              name: jenkins-trusted-ca-bundle
-              optional: true
+      serviceAccount: jenkins
+      serviceAccountName: jenkins
+      volumes:
+        - name: jenkins-data
+          persistentVolumeClaim:
+            claimName: jenkins
+        - configMap:
+            defaultMode: 420
             name: jenkins-trusted-ca-bundle
-          - name: httpd-pvc
-            persistentVolumeClaim:
-              claimName: httpd-pvc
-        ports:
-        - containerPort: 80
+            optional: true
+          name: jenkins-trusted-ca-bundle
+        - name: httpd-pvc
+          persistentVolumeClaim:
+            claimName: httpd-pvc
 
