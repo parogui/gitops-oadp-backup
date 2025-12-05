@@ -1,6 +1,8 @@
 apiVersion: project.openshift.io/v1
 kind: Project
 metadata:
+  labels:
+    argocd.argoproj.io/sync-wave: "-1"
   name: parodrig-jenkins-oadp
 spec:
   finalizers:
