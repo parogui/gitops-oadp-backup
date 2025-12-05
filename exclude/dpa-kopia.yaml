@@ -1,0 +1,29 @@
+apiVersion: oadp.openshift.io/v1alpha1
+kind: DataProtectionApplication
+metadata:
+  name: parodrig-dpa
+  namespace: openshift-adp
+spec:
+  backupImages: true
+  backupLocations:
+  - velero:
+      credential:
+        key: cloud
+        name: cloud-credentials
+      objectStorage:
+        bucket: parodrig-oadp-bucket
+        prefix: velero
+      provider: aws
+      default: true
+      config:
+        region: us-east-2
+    name: parodrig-storagelocation
+  configuration:
+    nodeAgent:
+      enable: true
+      uploaderType: kopia
+    velero:
+      disableFsBackup: false
+      defaultPlugins:
+      - openshift
+      - aws
