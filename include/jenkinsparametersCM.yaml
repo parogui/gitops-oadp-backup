@@ -1,0 +1,22 @@
+apiVersion: v1
+data:
+  AGENT_BASE_IMAGE: aW1hZ2UtcmVnaXN0cnkub3BlbnNoaWZ0LWltYWdlLXJlZ2lzdHJ5LnN2Yzo1MDAwL29wZW5zaGlmdC9qZW5raW5zLWFnZW50LWJhc2U6bGF0ZXN0
+  DISABLE_ADMINISTRATIVE_MONITORS: ZmFsc2U=
+  ENABLE_FATAL_ERROR_LOG_FILE: ZmFsc2U=
+  ENABLE_OAUTH: dHJ1ZQ==
+  JAVA_BUILDER_IMAGE: aW1hZ2UtcmVnaXN0cnkub3BlbnNoaWZ0LWltYWdlLXJlZ2lzdHJ5LnN2Yzo1MDAwL29wZW5zaGlmdC9qYXZhOmxhdGVzdA==
+  JAVA_FIPS_OPTIONS: LURjb20ucmVkaGF0LmZpcHM9ZmFsc2U=
+  JENKINS_IMAGE_STREAM_TAG: amVua2luczoy
+  JENKINS_SERVICE_NAME: amVua2lucw==
+  JENKINS_UC_INSECURE: ZmFsc2U=
+  JNLP_SERVICE_NAME: amVua2lucy1qbmxw
+  MEMORY_LIMIT: MUdp
+  NAMESPACE: b3BlbnNoaWZ0
+  NODEJS_BUILDER_IMAGE: aW1hZ2UtcmVnaXN0cnkub3BlbnNoaWZ0LWltYWdlLXJlZ2lzdHJ5LnN2Yzo1MDAwL29wZW5zaGlmdC9ub2RlanM6bGF0ZXN0
+  VOLUME_CAPACITY: MUdp
+kind: Secret
+metadata:
+  generateName: jenkins-persistent-parameters-
+  name: jenkins-persistent-parameters-mjpwn
+  namespace: parodrig-jenkins-oadp
+type: Opaque
